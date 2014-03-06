@@ -1,0 +1,5 @@
+C:\Projects\Ninject\ninject.integration\build\Debug\Integration.Mvc5.dll
+C:\Projects\Ninject\ninject.integration\build\Debug\Integration.Mvc5.pdb
+C:\Projects\Ninject\ninject.integration\src\Integration.Mvc5\obj\Debug\Integration.Mvc5.csprojResolveAssemblyReference.cache
+C:\Projects\Ninject\ninject.integration\src\Integration.Mvc5\obj\Debug\Integration.Mvc5.dll
+C:\Projects\Ninject\ninject.integration\src\Integration.Mvc5\obj\Debug\Integration.Mvc5.pdb

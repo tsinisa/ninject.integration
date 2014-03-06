@@ -1,0 +1,4 @@
+C:\Projects\Ninject\ninject.integration\build\Debug\Integration.MVC4.dll
+C:\Projects\Ninject\ninject.integration\build\Debug\Integration.MVC4.pdb
+C:\Projects\Ninject\ninject.integration\src\Integration.MVC4\obj\Debug\Integration.MVC4.dll
+C:\Projects\Ninject\ninject.integration\src\Integration.MVC4\obj\Debug\Integration.MVC4.pdb

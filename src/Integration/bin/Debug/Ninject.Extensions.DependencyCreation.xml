@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ninject.Extensions.DependencyCreation</name>
+    </assembly>
+    <members>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreationActivationStrategy">
+            <summary>
+            Creates dependencies for every object that has a <see cref="T:Ninject.Extensions.DependencyCreation.DependencyCreationDirective"/> assigned to its
+            plan.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationActivationStrategy.Activate(Ninject.Activation.IContext,Ninject.Activation.InstanceReference)">
+            <summary>
+            Contributes to the activation of the instance in the specified context.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="reference">A reference to the instance being activated.</param>
+        </member>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreationDirective">
+            <summary>
+            This directive defines that upon activation of the object a dependency has to be created.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationDirective.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Extensions.DependencyCreation.DependencyCreationDirective"/> class.
+            </summary>
+            <param name="dependencyType">Type of the dependency.</param>
+        </member>
+        <member name="P:Ninject.Extensions.DependencyCreation.DependencyCreationDirective.DependencyType">
+            <summary>
+            Gets the type of the dependency.
+            </summary>
+            <value>The type of the dependency.</value>
+        </member>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods">
+            <summary>
+            Extension methods for the definition that an object has a dependency.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.DefineDependency``2(Ninject.IKernel)">
+            <summary>
+            Defines that an object has a dependency to another object. 
+            This other object is created upon activation.
+            </summary>
+            <typeparam name="TParent">The type of the parent.</typeparam>
+            <typeparam name="TDependency">The type of the dependency.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.InDependencyCreatorScope``1(Ninject.Syntax.IBindingInSyntax{``0})">
+            <summary>
+            Defines that the binding is in the scope of the instance that requested the creation of the dependency.
+            </summary>
+            <typeparam name="T">The type of the binding.</typeparam>
+            <param name="syntax">The syntax on which the scope is defined.</param>
+            <returns>The syntax to configure more things on the binding.</returns>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.WithCreatorAsConstructorArgument``1(Ninject.Syntax.IBindingWithSyntax{``0},System.String)">
+            <summary>
+            Defines that the instance shall get an instance of the component that requested the creation of the dependency.
+            </summary>
+            <typeparam name="T">The type of the binding.</typeparam>
+            <param name="syntax">The syntax.</param>
+            <param name="parameterName">Name of the parameter.</param>
+            <returns>The syntax to configure more things on the binding.</returns>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.GetCreator(Ninject.Activation.IContext,Ninject.Planning.Targets.ITarget)">
+            <summary>
+            Gets an instance of the creator.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="target">The target.</param>
+            <returns>A proxy to the creator.</returns>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.CreateWeakReferenceProxy(System.Object,System.Type)">
+            <summary>
+            Creates a proxy that has a weak reference to the creator.
+            </summary>
+            <param name="creator">The creator.</param>
+            <param name="proxyType">Type of the proxy.</param>
+            <returns>A proxy that has a weak reference to the creator.</returns>
+        </member>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.WeakReferenceInterceptor">
+            <summary>
+            An interceptor for the waek reference proxy.
+            </summary>
+        </member>
+        <member name="F:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.WeakReferenceInterceptor.weakReference">
+            <summary>
+            Weak reference to the object
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.WeakReferenceInterceptor.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.WeakReferenceInterceptor"/> class.
+            </summary>
+            <param name="reference">The reference.</param>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationExtensionMethods.WeakReferenceInterceptor.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            Intercepts the specified invocation.
+            </summary>
+            <param name="invocation">The invocation.</param>
+        </member>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreationModule">
+            <summary>
+            Module for dependency creation.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationModule.Load">
+            <summary>
+            Loads the module into the kernel.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationModule.VerifyRequiredModulesAreLoaded">
+            <summary>
+            Called after loading the modules. A module can verify here if all other required modules are loaded.
+            </summary>
+        </member>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreationPlanningStrategy">
+            <summary>
+            Adds a <see cref="T:Ninject.Extensions.DependencyCreation.DependencyCreationDirective"/> to each plan of objects for which a 
+            dependency is defined.
+            </summary>
+        </member>
+        <member name="F:Ninject.Extensions.DependencyCreation.DependencyCreationPlanningStrategy.dependencyDefinitions">
+            <summary>
+            Contains all dependency definitions.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationPlanningStrategy.DefineDependency``2">
+            <summary>
+            Defines that <typeparamref name="TParent"/> requires an instance of <typeparamref name="TDependency"/>.
+            Upon activation of <typeparamref name="TParent"/> an instance of <typeparamref name="TDependency"/> 
+            is created with <typeparamref name="TParent"/> as its scope.
+            </summary>
+            <typeparam name="TParent">The type of the parent.</typeparam>
+            <typeparam name="TDependency">The type of the dependency.</typeparam>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreationPlanningStrategy.Execute(Ninject.Planning.IPlan)">
+            <summary>
+            Contributes to the specified plan.
+            </summary>
+            <param name="plan">The plan that is being generated.</param>
+        </member>
+        <member name="T:Ninject.Extensions.DependencyCreation.DependencyCreatorParameter">
+            <summary>
+            This parameter contains the instance of the binding that requested the creation of an dependency.
+            </summary>
+        </member>
+        <member name="F:Ninject.Extensions.DependencyCreation.DependencyCreatorParameter.creator">
+            <summary>
+            The instance of the object requesting a dependency.
+            </summary>
+        </member>
+        <member name="M:Ninject.Extensions.DependencyCreation.DependencyCreatorParameter.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ninject.Extensions.DependencyCreation.DependencyCreatorParameter"/> class.
+            </summary>
+            <param name="creator">The instance of the object requesting a dependency.</param>
+        </member>
+        <member name="P:Ninject.Extensions.DependencyCreation.DependencyCreatorParameter.Creator">
+            <summary>
+            Gets the instance of the object requesting a dependency.
+            </summary>
+            <value>The instance of the object requesting a dependency.</value>
+        </member>
+    </members>
+</doc>

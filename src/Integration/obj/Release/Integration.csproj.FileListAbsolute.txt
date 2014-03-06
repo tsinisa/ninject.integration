@@ -1,0 +1,5 @@
+C:\Projects\Ninject\ninject.integration\build\Release\Ninject.Integration.dll
+C:\Projects\Ninject\ninject.integration\build\Release\Ninject.Integration.pdb
+C:\Projects\Ninject\ninject.integration\src\Integration\obj\Release\Integration.csprojResolveAssemblyReference.cache
+C:\Projects\Ninject\ninject.integration\src\Integration\obj\Release\Ninject.Integration.dll
+C:\Projects\Ninject\ninject.integration\src\Integration\obj\Release\Ninject.Integration.pdb

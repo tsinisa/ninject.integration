@@ -1,0 +1,4 @@
+C:\Projects\Ninject\ninject.integration\build\Debug\Integration.WebApi.dll
+C:\Projects\Ninject\ninject.integration\build\Debug\Integration.WebApi.pdb
+C:\Projects\Ninject\ninject.integration\src\Integration.WebApi\obj\Debug\Integration.WebApi.dll
+C:\Projects\Ninject\ninject.integration\src\Integration.WebApi\obj\Debug\Integration.WebApi.pdb
