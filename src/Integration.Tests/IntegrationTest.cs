@@ -11,7 +11,7 @@
 
     public class IntegrationTest : IDisposable
     {
-        private IKernel kernel;
+        protected IKernel kernel;
 
         public IntegrationTest()
         {
@@ -73,9 +73,18 @@
         [Fact]
         public void InterceptSamuraiAttacks()
         {
-            var ctorArgWeapon = new ConstructorArgument("weapon", this.kernel.Get<IWeaponFactory>().CreateSword());
-            var samurai = this.kernel.Get<Samurai>(ctorArgWeapon);
+            var samurai = this.kernel.Get<Samurai>();
             samurai.Attack("intruder");
+        }
+    }
+
+    public class ConventionsInParentScope : IntegrationTest
+    {
+        [Fact]
+        public void ConventionsInstanceUsedInParentScope()
+        {
+            var samurai = this.kernel.Get<Samurai>();
+            samurai.Should().NotBeNull();
         }
     }
 }

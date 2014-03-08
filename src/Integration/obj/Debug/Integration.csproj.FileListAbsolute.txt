@@ -35,4 +35,3 @@ C:\Projects\Ninject\ninject.integration\build\Debug\Ninject.Integration.dll
 C:\Projects\Ninject\ninject.integration\build\Debug\Ninject.Integration.pdb
 C:\Projects\Ninject\ninject.integration\src\Integration\obj\Debug\Ninject.Integration.dll
 C:\Projects\Ninject\ninject.integration\src\Integration\obj\Debug\Ninject.Integration.pdb
-C:\Projects\Ninject\ninject.integration\src\Integration\obj\Debug\Integration.csprojResolveAssemblyReference.cache
