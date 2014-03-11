@@ -68,7 +68,7 @@
         }
 
         [Fact]
-        public void InterceptSamuraiAttacks()
+        public void InterceptUsedForWeaponPropertyInvoke()
         {
             var k = new StandardKernel(new NinjectSettings { LoadExtensions = false });
             k.Load<LinFuModule>();
