@@ -2,6 +2,7 @@ C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Integrat
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Integration.Tests.pdb
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Castle.Core.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\FluentAssertions.dll
+C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\LinFu.DynamicProxy.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.ChildKernel.dll
@@ -9,6 +10,7 @@ C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Factory.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Interception.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Interception.DynamicProxy.dll
+C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Interception.LinFu.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.NamedScope.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Integration.dll
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\xunit.dll
@@ -26,6 +28,7 @@ C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Factory.xml
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Interception.xml
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Interception.DynamicProxy.xml
+C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.Interception.LinFu.xml
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.NamedScope.pdb
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\Ninject.Extensions.NamedScope.xml
 C:\Projects\Ninject\ninject.integration\src\Integration.Tests\bin\Debug\xunit.xml

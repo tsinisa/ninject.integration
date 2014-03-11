@@ -37,6 +37,9 @@
     <Reference Include="FluentAssertions">
       <HintPath>..\..\packages\FluentAssertions.2.2.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\..\packages\LinFu.DynamicProxy.OfficialRelease.1.0.5\lib\net\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -60,6 +63,9 @@
     </Reference>
     <Reference Include="Ninject.Extensions.Interception.DynamicProxy">
       <HintPath>..\..\packages\Ninject.Extensions.Interception.DynamicProxy.3.0.2-unstable-9051\lib\net45-full\Ninject.Extensions.Interception.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception.LinFu">
+      <HintPath>..\..\packages\Ninject.Extensions.Interception.Linfu.3.0.2-unstable-9051\lib\net45-full\Ninject.Extensions.Interception.LinFu.dll</HintPath>
     </Reference>
     <Reference Include="Ninject.Extensions.NamedScope">
       <HintPath>..\..\packages\Ninject.Extensions.NamedScope.3.0.0.5\lib\net45-full\Ninject.Extensions.NamedScope.dll</HintPath>
@@ -91,6 +97,7 @@
       <Name>Integration</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

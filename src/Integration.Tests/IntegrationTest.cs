@@ -4,9 +4,9 @@
     using FluentAssertions;
     using Ninject;
     using Ninject.Extensions.ChildKernel;
+    using Ninject.Extensions.Interception;
+    using Ninject.Extensions.Interception.Infrastructure.Language;
     using Ninject.Integration;
-    using Ninject.Parameters;
-
     using Xunit;
 
     public class IntegrationTest : IDisposable
@@ -33,26 +33,23 @@
         }
 
         [Fact]
-        public void ConventionsInstanceUsedInTransientScope()
+        public void ConventionsInNamedScopeInstanceFromNamedScope()
         {
-            var barrackeOne = this.kernel.Get<Barracks>();
-            barrackeOne.Should().NotBeNull();
+            var castle = this.kernel.Get<Castle>();
 
-            var barrackeTwo = this.kernel.Get<Barracks>();
-            barrackeTwo.Should().NotBeNull();
-
-            barrackeOne.Should().NotBeSameAs(barrackeTwo);
+            castle.FirstBarracks.Cleric.Should().BeSameAs(castle.SecondBarracks.Cleric);
         }
 
         [Fact]
-        public void NamedScopeInstanceUsedFromNamedScope()
+        public void InstanceUsedInTransientScope()
         {
-            var ctrArgCleric = new ConstructorArgument("cleric", this.kernel.Get<Monk>());
+            var castleOne = this.kernel.Get<Castle>();
+            castleOne.Should().NotBeNull();
 
-            var barrackeOne = this.kernel.Get<Barracks>(ctrArgCleric);
-            var barrackeTwo = this.kernel.Get<Barracks>(ctrArgCleric);
+            var castleTwo = this.kernel.Get<Castle>();
+            castleTwo.Should().NotBeNull();
 
-            barrackeOne.Cleric.Should().BeSameAs(barrackeTwo.Cleric);
+            castleOne.Should().NotBeSameAs(castleTwo);
         }
 
         [Fact]
@@ -73,18 +70,16 @@
         [Fact]
         public void InterceptSamuraiAttacks()
         {
-            var samurai = this.kernel.Get<Samurai>();
-            samurai.Attack("intruder");
-        }
-    }
+            var k = new StandardKernel(new NinjectSettings { LoadExtensions = false });
+            k.Load<LinFuModule>();
+            k.Bind<IWeapon>().To<Shuriken>().Intercept().With<CountInterceptor>();
+            k.Bind<Samurai>().ToSelf();
 
-    public class ConventionsInParentScope : IntegrationTest
-    {
-        [Fact]
-        public void ConventionsInstanceUsedInParentScope()
-        {
-            var samurai = this.kernel.Get<Samurai>();
-            samurai.Should().NotBeNull();
+            CountInterceptor.Reset();
+            var samurai = k.Get<Samurai>();
+            samurai.Attack("intruder");
+
+            CountInterceptor.Count.Should().Be(1);
         }
     }
 }
