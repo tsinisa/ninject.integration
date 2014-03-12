@@ -11,7 +11,7 @@
 
     public class IntegrationTest : IDisposable
     {
-        protected IKernel kernel;
+        private IKernel kernel;
 
         public IntegrationTest()
         {

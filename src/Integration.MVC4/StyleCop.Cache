@@ -23,9 +23,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-1951682806">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="NinjectWebCommon.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2013.12.15 15:29:26.000</styleCop>
@@ -55,4 +52,7 @@
       </violation>
     </violations>
   </sourcecode>
+  <project key="-1951682806">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>
